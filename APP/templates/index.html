@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DDLj</title>
+</head>
+<body>
+<form action="getfile" method="POST" enctype="multipart/form-data">
+<table>
+	<font color="red">
+<tr>
+                <td>
+                    <label for="Schempath"><b>Input JSON Schema Path</b></label>
+                </td>
+                <td>
+					<input type="text" id="Schempath" name="Schempath">                
+                </td>
+            </tr>
+	<tr>
+                <td>
+                    <label for="domain"><b style="color:red;">DataBase Name</b></label>
+                </td>
+                <td>
+                    <select id="domain" name="domain">
+                        <option disabled selected>--Choose Database--</option>
+                        <optgroup label="Database Name">
+                            <option>Oracle</option>
+							<option>PostgreSQL</option>
+                            <option>MYSQL</option>
+                            <option>DB2</option>
+                            <option>MariaDB</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+	<tr>
+                <td>
+                    <label for="Gloss"><b>Input Glossary Path</b></label>
+                </td>
+                <td>
+					<input type="text" id="Gloss" name="Gloss">                
+                </td>
+            </tr>
+	<tr>
+                <td>
+                    <label for="SQL"><b>Output SQL file Path</b></label>
+                </td>
+                <td>
+					<input type="text" id="SQL" name="SQL">                
+                </td>
+            </tr>
+	</font>
+</table>
+<input type="submit" value="Submit">
+</form>
+<br/><br/>
+*Glossay file should be in .csv format.
+</body>
+</html>
