@@ -148,6 +148,7 @@ def sqlStrinNthLevel(json_schema_flat,n,ValStr,Glossarypath):
 
 #Writing to the outputfile path
 def callMain(file_path,Database,Glossarypath,outputfilePath):
+    full_sql_str=''
     with open(file_path) as json_data:
         json_schema=json.load(json_data)
     json_schema_flat = flatten(json_schema)
@@ -179,6 +180,7 @@ def callMain(file_path,Database,Glossarypath,outputfilePath):
             DDLout=DDLout+ddlTxt+'\n'
         DDLout=DDLout[:len(DDLout)-2]+');'
         FileOpen.write(DDLout)
+        full_sql_str=DDLout
         for p,q in json_schema_flat.items():
             if q=='array':
                 ArrayList.append(p.split('_')[1])
@@ -191,7 +193,9 @@ def callMain(file_path,Database,Glossarypath,outputfilePath):
                 DDLoutChild=DDLoutChild+listFst+'\n'
             DDLoutChild=DDLoutChild[:len(DDLoutChild)-2]+');'
             FileOpen.write(DDLoutChild)
+            full_sql_str=full_sql_str+DDLoutChild
         FileOpen.close()
+        return full_sql_str
     except:
         df=pd.DataFrame(columns=['Name','Abbreviation'])
 def genddl(file_path,Database,Glossarypath,outputfilePath):
@@ -199,7 +203,8 @@ def genddl(file_path,Database,Glossarypath,outputfilePath):
         with open(file_path) as json_data:
             json_schema=json.load(json_data)
         json_schema_flat = flatten(json_schema)
-        callMain(file_path,Database,Glossarypath,outputfilePath)
+        x=callMain(file_path,Database,Glossarypath,outputfilePath)
+        return x
     except Exception as e:
         print(e)
 if __name__ == '__main__':
