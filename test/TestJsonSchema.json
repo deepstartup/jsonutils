@@ -1,0 +1,45 @@
+{
+	"schema": "Http://Json-Schema.Org/Draft-07/Schema#",
+	"type": "object",
+	"title": "TableNameTest",
+	"additionalProperties": false,
+	"properties": {
+		"ColumnNameOne": {
+			"type": "string",
+			"maxLength": 10
+		},
+		"ColumnNameTwo": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"ColumnNameThree": {
+			"type": "string",
+			"maxLength": 200
+		},
+		"ColumnNameFour": {
+			"type": "string",
+			"maxLength": 300
+		},
+		"ColumnNameFive": {
+			"type": "string",
+			"format": "date"
+		},
+		"ColumnNameSix": {
+			"type": "number"
+		},
+		"ColumnNameSeven": {
+			"type": "number"
+		},
+		"ColumnNameEight": {
+			"type": "string",
+			"maxLength": 1000
+		},
+		"ColumnNameNine": {
+			"type": "string",
+			"maxLength": 2000
+		},
+		"ColumnNameTen": {
+			"type": "number"
+		}
+	}
+}
