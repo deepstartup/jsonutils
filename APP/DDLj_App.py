@@ -17,7 +17,7 @@ def getfile():
         jsonschema=request.form['Schempath']
         gloss=request.form['Gloss']
         domain=request.form['domain']
-        sqlpath='C:/'
+        sqlpath=request.form['SQL']
         try:
             f=genddl(jsonschema,domain,gloss,sqlpath)
         except Exception as e:
