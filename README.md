@@ -1,7 +1,7 @@
 # JSON Utils Package (DDLj)
 This is a python package having multiple utilities for handling JSON Files. 
 
-1.DDLj : Converts JSON Schema Files into ANSI SQL DDLs
+Module1 - DDLj : Converts JSON Schema Files into ANSI SQL DDLs
 Supports foll databases: 
 A.PostgreSQL
 B.MYSQL
@@ -99,3 +99,5 @@ COL_NAM_Ten Number(38,10));
 
 Please see the Test Folder for JSON schema, glossary file and output.
 ****************************
+
+Note: Other modules to come soon.
