@@ -33,7 +33,9 @@ Note : * indicates mandatory parameters
 
 It also includes a Flask module for front-end if used as a standalone tool. Refer to App directory.
 *******************************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Example:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Input JSON schema as:
 {
 	"schema": "Http://Json-Schema.Org/Draft-07/Schema#",
